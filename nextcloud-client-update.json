@@ -1,0 +1,14 @@
+{
+  "rootUrl": "https://nc.timebank.tw",
+  "baseUrl": "https://nc.timebank.tw",
+  "redirectUris": ["https://nc.timebank.tw/*"],
+  "webOrigins": ["https://nc.timebank.tw"],
+  "attributes": {
+    "post.logout.redirect.uris": ["https://nc.timebank.tw/*"]
+  },
+  "standardFlowEnabled": true,
+  "implicitFlowEnabled": false,
+  "directAccessGrantsEnabled": true,
+  "serviceAccountsEnabled": true,
+  "publicClient": false
+}

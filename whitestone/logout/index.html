@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Logout - WhiteStone IAM</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin-top: 10%; background: #f8f9fa; }
+    h2 { color: #2f7de1; }
+    .button { display: inline-block; margin: 10px; padding: 12px 24px;
+              background: #2f7de1; color: white; text-decoration: none;
+              border-radius: 5px; font-weight: bold; }
+    .button:hover { background: #1d5cad; }
+  </style>
+  <script>
+    const translations = {
+      en: { title: "You have been signed out of WhiteStone IAM",
+            desc: "Your session has ended. Please choose an option:",
+            login: "Login Again", portal: "Go to Portal",
+            nc: "Open Nextcloud", ai: "AI Workspace" },
+      zh_TW: { title: "您已登出 WhiteStone IAM",
+               desc: "您的工作階段已結束，請選擇下一步：",
+               login: "重新登入", portal: "前往入口網站",
+               nc: "打開 Nextcloud", ai: "AI 工作平台" }
+    };
+    function detectLocale() {
+      const urlParams = new URLSearchParams(window.location.search);
+      let locale = urlParams.get('locale');
+      if (!locale) locale = navigator.language || 'en';
+      if (locale.startsWith("zh")) return "zh_TW";
+      return "en";
+    }
+    document.addEventListener("DOMContentLoaded", () => {
+      const t = translations[detectLocale()];
+      document.getElementById("title").innerText = t.title;
+      document.getElementById("desc").innerText = t.desc;
+      document.getElementById("login").innerText = t.login;
+      document.getElementById("portal").innerText = t.portal;
+      document.getElementById("nc").innerText = t.nc;
+      document.getElementById("ai").innerText = t.ai;
+    });
+  </script>
+</head>
+<body>
+  <h2 id="title"></h2>
+  <p id="desc"></p>
+  <a id="login" class="button" href="https://iam.timebank.tw/realms/krp/account/"></a>
+  <a id="portal" class="button" href="https://portal.timebank.tw"></a>
+  <a id="nc" class="button" href="https://nc.timebank.tw"></a>
+  <a id="ai" class="button" href="https://ai.timebank.tw"></a>
+</body>
+</html>

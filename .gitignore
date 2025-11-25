@@ -1,0 +1,43 @@
+# ---------- Environment ----------
+.env
+.env.secret
+.env.local
+.env.*.local
+
+# ---------- Backups ----------
+backups/
+*.bak
+*.sql
+
+# ---------- Postgres ----------
+postgres/data/
+postgres/logs/
+postgres/tmp/
+
+# ---------- Keycloak ----------
+# Providers (JARs built from source)
+keycloak/providers/*.jar
+keycloak/providers/**/*.jar
+
+# Theme build outputs (if using Node)
+keycloak/themes/*/dist/
+keycloak/themes/*/compiled/
+keycloak/themes/*/node_modules/
+keycloak/themes/*/.cache/
+
+# ---------- Logs & Temp ----------
+*.log
+*.tmp
+*.pid
+*.lock
+
+# ---------- IDE / Editor ----------
+.vscode/
+.idea/
+*.swp
+
+# ---------- Misc local junk ----------
+p/
+-/
+.DS_Store
+Thumbs.db

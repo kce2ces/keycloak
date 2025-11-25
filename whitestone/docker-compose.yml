@@ -1,0 +1,15 @@
+services:
+  logout-page:
+    image: nginx:alpine
+    container_name: logout-page
+    ports:
+      - "8085:80"   # only local, NPM will proxy it
+    volumes:
+      - ./logout:/usr/share/nginx/html:ro
+    networks:
+      - npm-net
+    restart: unless-stopped
+
+networks:
+  npm-net:
+    external: true
