@@ -46,8 +46,8 @@ services:
       KC_DB_PASSWORD: ${PG_PASSWORD}
 
       # --- Hostname v2 behind NPM (REQUIRED) ---
-      KC_HOSTNAME: ${KC_HOSTNAME}
-      KC_PROXY_HEADERS: ${KC_PROXY_HEADERS}
+      KC_HOSTNAME: ${KC_HOSTNAME:-iam.timebank.tw}
+      KC_PROXY: ${KC_PROXY:-edge}
       KC_HTTP_ENABLED: ${KC_HTTP_ENABLED}
       KC_HTTP_PORT: ${KC_HTTP_PORT}
       KC_HTTPS_PORT: ${KC_HTTPS_PORT}
