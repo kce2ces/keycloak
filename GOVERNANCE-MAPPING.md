@@ -1,6 +1,6 @@
 # Governance Mapping — Keycloak IAM
 
-This document maps governance authority defined by the
+This document maps governance authority defined by the 
 WSI Governance Canon to the operational scope of this Keycloak system.
 
 ## 1. Governance Authority
