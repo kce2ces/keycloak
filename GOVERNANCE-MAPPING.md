@@ -51,3 +51,9 @@ Any AI-assisted tooling interacting with this system:
 
 In all cases of ambiguity or conflict:
 WSI Governance Canon prevails.
+
+## Operational Reality
+
+This Keycloak instance is currently operated on a VPS environment.
+The GitHub repository serves as the governance and documentation
+system of record, not as the sole deployment source.
